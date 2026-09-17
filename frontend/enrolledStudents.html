@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enrolled Students</title>
+
+    <script type="text/javascript" src="crs.js"></script>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f4f7fc;
+            padding:40px;
+        }
+
+        .container{
+            max-width:900px;
+            margin:auto;
+        }
+
+        h2{
+            text-align:center;
+            color:#2c3e50;
+            margin-bottom:25px;
+            font-size:32px;
+        }
+
+        .table-card{
+            background:white;
+            border-radius:12px;
+            overflow:hidden;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        thead{
+            background:#4e73df;
+            color:white;
+        }
+
+        th{
+            padding:16px;
+            font-size:16px;
+            text-transform:uppercase;
+            letter-spacing:1px;
+        }
+
+        td{
+            padding:14px;
+            border-bottom:1px solid #eaeaea;
+        }
+
+        tbody tr:nth-child(even){
+            background:#f8f9fc;
+        }
+
+        tbody tr:hover{
+            background:#e8f0ff;
+            transition:0.3s;
+        }
+
+        .home-btn{
+            display:inline-block;
+            margin-bottom:20px;
+            padding:10px 20px;
+            background:#4e73df;
+            color:white;
+            text-decoration:none;
+            border-radius:6px;
+            font-weight:bold;
+            transition:0.3s;
+        }
+
+        .home-btn:hover{
+            background:#2e59d9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <a href="index.html" class="home-btn">← Home</a>
+
+        <h2>👨‍🎓 Enrolled Students</h2>
+
+        <div class="table-card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email ID</th>
+                        <th>Course Name</th>
+                    </tr>
+                </thead>
+
+                <tbody id="enrollstuTable" align="center">
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script>
+        window.onload = function(){
+            showenrolledcourses();
+        }
+    </script>
+
+</body>
+</html>

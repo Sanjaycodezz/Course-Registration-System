@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Courses</title>
+
+    <script type="text/javascript" src="crs.js"></script>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f4f6f9;
+            padding:40px;
+        }
+
+        .container{
+            max-width:1000px;
+            margin:auto;
+        }
+
+        h2{
+            text-align:center;
+            color:#2c3e50;
+            margin-bottom:25px;
+            font-size:32px;
+        }
+
+        .table-container{
+            background:white;
+            border-radius:12px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.1);
+            overflow:hidden;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        thead{
+            background:#2c3e50;
+            color:white;
+        }
+
+        th{
+            padding:16px;
+            font-size:16px;
+            letter-spacing:1px;
+        }
+
+        td{
+            padding:14px;
+            border-bottom:1px solid #e0e0e0;
+        }
+
+        tbody tr:nth-child(even){
+            background:#f8f9fa;
+        }
+
+        tbody tr:hover{
+            background:#dbeafe;
+            transition:0.3s;
+            cursor:pointer;
+        }
+
+        .back-btn{
+            display:inline-block;
+            margin-bottom:20px;
+            padding:10px 20px;
+            background:#3498db;
+            color:white;
+            text-decoration:none;
+            border-radius:6px;
+            font-weight:bold;
+        }
+
+        .back-btn:hover{
+            background:#2980b9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <a href="index.html" class="back-btn">← Home</a>
+
+        <h2>📚 Available Courses</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>COURSE ID</th>
+                        <th>COURSE NAME</th>
+                        <th>TRAINER</th>
+                        <th>DURATION (WEEKS)</th>
+                    </tr>
+                </thead>
+
+                <tbody id="coursetable" align="center">
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script>
+        window.onload = function(){
+            showcourse();
+        }
+    </script>
+
+</body>
+</html>
